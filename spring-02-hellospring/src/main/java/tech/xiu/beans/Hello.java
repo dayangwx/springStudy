@@ -6,10 +6,10 @@ import lombok.Data;
 public class Hello {
 
     private String str;
-
+/*
     @Override
     public String toString() {
         return "str hello spring";
-    }
+    }*/
 
 }
