@@ -8,5 +8,3 @@
 /httpRequests/
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
-/spring-01-ioc1/target/
-/sspring-02-hellospring/target/
