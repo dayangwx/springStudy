@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="tech.xiu.bean.Student">
+        <property name="name" value="刘文秀"></property>
+        <property name="address" ref="address"></property>
+        <property name="books" >
+            <array value-type="java.lang.String">
+                <value>白鹿原</value>
+                <value>万历十五年</value>
+                <value>金瓶梅</value>
+                <value>三体</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list value-type="java.lang.String">
+                <value>tennis</value>
+                <value>basketball</value>
+                <value>table tennis</value>
+            </list>
+        </property>
+        <property name="games">
+            <set value-type="java.lang.String">
+                <value>英雄联盟</value>
+                <value>王者荣耀</value>
+                <value>王者荣耀</value> <!--  会自动去重-->
+            </set>
+        </property>
+        <property name="scores">
+            <map value-type="java.lang.String">
+                <entry key="英语">
+                    <value>90</value>
+                </entry>
+                <entry key="数学">
+                    <value>89</value>
+                </entry>
+                <entry key="历史" value="100"></entry>
+            </map>
+        </property>
+        <property name="info" >
+            <props>
+                <prop key="url">jdbc:mysql://localhost:3306</prop>
+                <prop key="driver">mysql</prop>
+                <prop key="username">root</prop>
+                <prop key="password">12345</prop>
+            </props>
+        </property>
+        <property name="wife" >
+            <null></null>
+        </property>
+    </bean>
+
+    <bean id="address" class="tech.xiu.bean.Address">
+        <property name="address" value="成都市光明城市"></property>
+    </bean>
+</beans>
