@@ -7,8 +7,8 @@ import tech.xiu.pojo.User;
 public class MyTest {
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        User user = context.getBean("user", User.class);
+        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        User user = context.getBean("ua1", User.class);
         user.getUser();
 
     }
