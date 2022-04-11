@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 开启注解模式，也就是说在代码中的spring注解可以生效了 -->
+    <context:annotation-config/>
+
+    <bean id="cat" class="tech.xiu.bean.Cat"></bean>
+    <bean id="cat22" class="tech.xiu.bean.Cat"></bean>
+    <bean id="dog" class="tech.xiu.bean.Dog"></bean>
+    <bean id="dog22" class="tech.xiu.bean.Dog"></bean>
+
+
+        <bean id="person" class="tech.xiu.bean.Person">
+            <property name="name" value="刘文秀"></property>
+        </bean>
+    </beans>

@@ -3,15 +3,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="tech.xiu.bean.Cat"></bean>
+<!--    <bean class="tech.xiu.bean.Cat"></bean>
     <bean class="tech.xiu.bean.Dog"></bean>
 
     <bean id="person" class="tech.xiu.bean.Person" autowire="byType">
         <property name="name" value="刘文秀"></property>
-    </bean>
+    </bean>-->
 
-    <bean id="person" class="tech.xiu.bean.Person" autowire="byName">
-        <property name="name" value="刘文秀"></property>
-    </bean>
+
 
 </beans>
