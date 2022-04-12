@@ -11,5 +11,4 @@
     <context:annotation-config/>
     <context:component-scan base-package="tech.xiu"></context:component-scan>
 
-
 </beans>
