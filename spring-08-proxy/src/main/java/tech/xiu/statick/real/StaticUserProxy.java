@@ -1,4 +1,4 @@
-package tech.xiu.real;
+package tech.xiu.statick.real;
 
 import org.junit.Test;
 

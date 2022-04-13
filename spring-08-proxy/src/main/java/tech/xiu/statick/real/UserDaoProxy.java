@@ -1,4 +1,4 @@
-package tech.xiu.real;
+package tech.xiu.statick.real;
 
 // 代理对象，代理了真实对象
 public class UserDaoProxy implements IUserDao{

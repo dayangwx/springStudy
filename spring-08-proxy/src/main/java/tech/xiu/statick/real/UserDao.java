@@ -1,4 +1,4 @@
-package tech.xiu.real;
+package tech.xiu.statick.real;
 
 // 真实对象。 需要被代理
 public class UserDao implements IUserDao{

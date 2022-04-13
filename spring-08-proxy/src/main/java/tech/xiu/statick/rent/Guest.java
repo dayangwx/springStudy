@@ -1,4 +1,4 @@
-package tech.xiu.rent;
+package tech.xiu.statick.rent;
 
 public class Guest {
 

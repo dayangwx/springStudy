@@ -1,6 +1,6 @@
-package tech.xiu.example;
+package tech.xiu.statick.example;
 
-public class UserServiceProxy implements UserService{
+public class UserServiceProxy implements UserService {
 
     private UserServiceImpl userService;
 

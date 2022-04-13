@@ -1,4 +1,4 @@
-package tech.xiu.example;
+package tech.xiu.statick.example;
 
 public class UserController {
 

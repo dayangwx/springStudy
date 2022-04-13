@@ -1,4 +1,4 @@
-package tech.xiu.example;
+package tech.xiu.dynamic.user;
 
 /**
  * 抽象出来的接口

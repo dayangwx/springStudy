@@ -1,6 +1,6 @@
-package tech.xiu.example;
+package tech.xiu.statick.example;
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     @Override
     public void addUser() {
         System.out.println("添加一个User");
