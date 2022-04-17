@@ -7,7 +7,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-03-ioc2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-08-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-09-aop/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring-09-01-aop/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
