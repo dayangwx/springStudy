@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/spring-03-ioc2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-08-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/spring-09-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-10-mybaits/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
