@@ -20,6 +20,8 @@
         <module>spring-09-aop</module>
         <module>spring-09-aop2</module>
         <module>spring-10-mybaits</module>
+        <module>spring-11-mybatis-spring</module>
+        <module>spring-11-mybatis-spring2</module>
     </modules>
 
     <properties>
@@ -37,6 +39,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>5.3.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.6</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
