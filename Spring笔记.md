@@ -18,11 +18,11 @@
 > ==对象由Spring来创建，管理，装配!==
 
 ```java
-<depedency>
+<depedency>  
     <groupId>org.springframework</groupId>
     <artifactId>spring-webmvc</artifactId>
     <version>5.3.18</version>
-</depedency>
+</depedency>  
 这个依赖会导入spring很多的jar，如：core，context，web，beans，aop，expressions
 ```
 
@@ -34,7 +34,7 @@
 >
 > 2：xml内容如下：
 >
-> 可以看出，使用的是property
+>   可以看出，使用的是property
 
 ```xml
 <bean id="dataDaoSqlserve" class="tech.xiu.dao.DataDaoSqlserve"/>
@@ -60,7 +60,7 @@
     <constructor-arg name="username" value="张睿桐"></constructor-arg>
     <constructor-arg name="hobby" value="swimming"></constructor-arg>
 </bean>
-方式三：通过有参构造中参数的类型
+方式三：通过有参构造中参数的类型 
 <bean id="user" class="tech.xiu.pojo.User">
     <constructor-arg type="java.lang.String" value="陈若愚"></constructor-arg>
     <constructor-arg type="java.lang.String" value="sing 孤勇者"></constructor-arg>
@@ -83,7 +83,7 @@
 
 ```xml
  <bean id="user" class="tech.xiu.pojo.User" name="u1" scope="prototype">
-
+     
 </bean>
 ```
 
@@ -223,6 +223,7 @@ xmlns:d="http://www.springframework.org/schema/c"
 
 ### 1-3.bean的作用域
 
+> 
 >
 
 |                            scope                             |               description                |
@@ -368,11 +369,11 @@ public class Person {
 >
 > 注意：
 >
-> 1：byName和byType找不到，报错
+>   1：byName和byType找不到，报错
 >
-> 2：byType找到多个，报错
+>   2：byType找到多个，报错
 >
-> 3：byName找到多个，这种情况xml本身不允许存在。
+>   3：byName找到多个，这种情况xml本身不允许存在。
 
 ```java
 // xml与2-1-1中相同
@@ -406,6 +407,7 @@ public class Person {
 ### 2-2.注解方式创建对象
 
 > 还是需要beans.xml，只是内容很少了。
+>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -495,7 +497,7 @@ public class User {
 
 - @Value
 
-
+  
 
 ## 3、面向切面编程(AOP)
 
@@ -509,11 +511,12 @@ public class User {
 
 #### 3-1-1.静态代理
 
->
+> 
 
 ![image-20220412230035841](https://gitee.com/liuwenxiu/myblogimg/raw/master/img/image-20220412230035841.png)
 
 ```java
+
 /**
  * 租房接口
  * 中介和房东都要做的事情
@@ -629,6 +632,7 @@ public class Guest {
 > 源码：https://gitee.com/liuwenxiu/springStudy
 
 ```java
+
 public class ProxyInvocationHandler implements InvocationHandler {
 
     private Object target;
@@ -683,7 +687,7 @@ public class ProxyInvocationHandler implements InvocationHandler {
 >
 > 说白了一句话：**就是在不改变原有代码的前提下，去增加新功能 ！**
 >
->
+> 
 >
 > 名词理解：
 >
@@ -713,7 +717,7 @@ public class ProxyInvocationHandler implements InvocationHandler {
 ```xml
 注意：
   JDK1.6 —— aspectJ1.6
-  JDK1.7 —— aspectJ1.7.3+
+  JDK1.7 —— aspectJ1.7.3+ 
 
 <dependency>
      <groupId>aspectj</groupId>
@@ -804,7 +808,7 @@ public class DiyAspect {
     public void after() {
         System.out.println("方法执行后。。。");
     }
-
+    
     // 环绕通知需要传入这个参数
     public void around(ProceedingJoinPoint proceedingJoinPoint) {
         try{
@@ -838,143 +842,143 @@ public class DiyAspect {
 >
 > 步骤：
 >
-> 1：导入jar包
+>  1：导入jar包
 >
-> 2：编写切面
+>  2：编写切面
 >
-> 3：测试
+>  3：测试
 
 -  导入jar包
 
-   ```xml
-   <!-- 支持切入点表达式等等,包含aspectjrt：简单理解，支持aop相关注解等等 -->
-   <dependency>
-       <groupId>org.aspectj</groupId>
-       <artifactId>aspectjweaver</artifactId>
-       <version>1.9.9</version>
-   </dependency>
-   <!-- 导入这个依赖，会导入spring相关的context，aop等 -->
-   <dependency>
-       <groupId>org.springframework</groupId>
-       <artifactId>spring-webmvc</artifactId>
-       <version>5.3.18</version>
-   </dependency>
-   <!-- spring整合junit，主要使测试用 -->
-   <dependency>
-       <groupId>org.springframework</groupId>
-       <artifactId>spring-test</artifactId>
-       <version>5.3.8</version>
-   </dependency>
-   <dependency>
-       <groupId>org.projectlombok</groupId>
-       <artifactId>lombok</artifactId>
-       <version>1.18.22</version>
-   </dependency>
-   <dependency>
-       <groupId>junit</groupId>
-       <artifactId>junit</artifactId>
-       <version>4.13.2</version>
-   </dependency>
-   ```
+  ```xml
+  <!-- 支持切入点表达式等等,包含aspectjrt：简单理解，支持aop相关注解等等 -->
+  <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.9</version>
+  </dependency>
+  <!-- 导入这个依赖，会导入spring相关的context，aop等 -->
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.3.18</version>
+  </dependency>
+  <!-- spring整合junit，主要使测试用 -->
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.3.8</version>
+  </dependency>
+  <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+  </dependency>
+  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+  </dependency>
+  ```
 
 -  编写切面
 
-   ```java
-   package tech.xiu;
-
-   import org.aspectj.lang.ProceedingJoinPoint;
-   import org.aspectj.lang.annotation.*;
-   import org.springframework.context.annotation.ComponentScan;
-   import org.springframework.context.annotation.Configuration;
-   import org.springframework.context.annotation.EnableAspectJAutoProxy;
-
-   @Configuration   // 说明它是个配置类，相当于beans.xml
-   @Aspect          // 说明这是个切面
-   @ComponentScan("tech.xiu")  // 扫描该路径下的类的注解
-   @EnableAspectJAutoProxy     // 开启AOP
-   public class AspectConfig {
-
-       @Pointcut(value = "execution(* tech.xiu.UserServiceImpl.*(..))")
-       public void pointcut1(){}
-
-       @Before("pointcut1()")
-       public void before() {
-           System.out.println("前置通知。。。。");
-       }
-
-       @After("pointcut1()")
-       public void after() {
-           System.out.println("后置通知。。。。");
-       }
-
-       @AfterThrowing("pointcut1()")
-       public void throwsErr() {
-           System.out.println("异常通知。。。。");
-       }
-
-       @Around("pointcut1()")
-       public void around(ProceedingJoinPoint pjp) {
-
-           try{
-               System.out.println("环绕通知前。。。");
-               pjp.proceed();
-               System.out.println("环绕通知后。。。");
-           }catch (Throwable t) {
-               System.out.println("异常通知。。。（环绕通知里）");
-           }finally {
-               System.out.println("最终通知。。。（环绕通知里）");
-           }
-       }
-
-        @AfterReturning(value="pointcut1()",
-               returning="result")
-       public void afterReturning(JoinPoint joinPoint, Object result){
-           String methodName = joinPoint.getSignature().getName();
-           System.out.println("The method " + methodName + " ends with " + result);
-       }
-
-   }
-   ```
+  ```java
+  package tech.xiu;
+  
+  import org.aspectj.lang.ProceedingJoinPoint;
+  import org.aspectj.lang.annotation.*;
+  import org.springframework.context.annotation.ComponentScan;
+  import org.springframework.context.annotation.Configuration;
+  import org.springframework.context.annotation.EnableAspectJAutoProxy;
+  
+  @Configuration   // 说明它是个配置类，相当于beans.xml
+  @Aspect          // 说明这是个切面
+  @ComponentScan("tech.xiu")  // 扫描该路径下的类的注解
+  @EnableAspectJAutoProxy     // 开启AOP
+  public class AspectConfig {
+  
+      @Pointcut(value = "execution(* tech.xiu.UserServiceImpl.*(..))")
+      public void pointcut1(){}
+  
+      @Before("pointcut1()")
+      public void before() {
+          System.out.println("前置通知。。。。");
+      }
+  
+      @After("pointcut1()")
+      public void after() {
+          System.out.println("后置通知。。。。");
+      }
+  
+      @AfterThrowing("pointcut1()")
+      public void throwsErr() {
+          System.out.println("异常通知。。。。");
+      }
+  
+      @Around("pointcut1()")
+      public void around(ProceedingJoinPoint pjp) {
+  
+          try{
+              System.out.println("环绕通知前。。。");
+              pjp.proceed();
+              System.out.println("环绕通知后。。。");
+          }catch (Throwable t) {
+              System.out.println("异常通知。。。（环绕通知里）");
+          }finally {
+              System.out.println("最终通知。。。（环绕通知里）");
+          }
+      }
+      
+       @AfterReturning(value="pointcut1()",
+              returning="result")
+      public void afterReturning(JoinPoint joinPoint, Object result){
+          String methodName = joinPoint.getSignature().getName();
+          System.out.println("The method " + methodName + " ends with " + result);
+      }
+  
+  }
+  ```
 
 -  测试
 
-   ```java
-   import org.junit.Test;
-   import org.junit.runner.RunWith;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.test.context.ContextConfiguration;
-   import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-   import tech.xiu.AspectConfig;
-   import tech.xiu.UserService;
+  ```java
+  import org.junit.Test;
+  import org.junit.runner.RunWith;
+  import org.springframework.beans.factory.annotation.Autowired;
+  import org.springframework.test.context.ContextConfiguration;
+  import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+  import tech.xiu.AspectConfig;
+  import tech.xiu.UserService;
+  
+  @RunWith(SpringJUnit4ClassRunner.class)                // junit整合spring，固定写法
+  @ContextConfiguration(classes = {AspectConfig.class})  // 加载AspectConfig配置
+  public class MyTest {
+  
+      @Autowired
+      private UserService userService;
+  
+      @Test
+      public void test1() {
+          userService.addUser();
+      }
+  }
+  
+  
+  结果：
+      环绕通知前。。。
+      前置通知。。。。
+      添加一个user
+      后置通知。。。。
+      环绕通知后。。。
+      最终通知。。。（环绕通知里）
+      
+     特殊点说明：
+       在AfterReturning中，是可以获得原始方法的返回数据的。
+      “执行的方法是： isSucceed ，返回的结果是：是的，成功了！！！”
+  ```
 
-   @RunWith(SpringJUnit4ClassRunner.class)                // junit整合spring，固定写法
-   @ContextConfiguration(classes = {AspectConfig.class})  // 加载AspectConfig配置
-   public class MyTest {
-
-       @Autowired
-       private UserService userService;
-
-       @Test
-       public void test1() {
-           userService.addUser();
-       }
-   }
-
-
-   结果：
-       环绕通知前。。。
-       前置通知。。。。
-       添加一个user
-       后置通知。。。。
-       环绕通知后。。。
-       最终通知。。。（环绕通知里）
-
-      特殊点说明：
-        在AfterReturning中，是可以获得原始方法的返回数据的。
-       “执行的方法是： isSucceed ，返回的结果是：是的，成功了！！！”
-   ```
-
-
+  
 
 ## 4、整合Mybatis
 
@@ -1031,7 +1035,7 @@ public class DiyAspect {
               </dataSource>
           </environment>
       </environments>
-
+  
       <mappers>
   <!--        <mapper class="tech.xiu.dao.EmpMapper"/>-->
           <mapper resource="tech/xiu/dao/EmpMapper.xml"></mapper>
@@ -1045,12 +1049,12 @@ public class DiyAspect {
           PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="tech.xiu.dao.EmpMapper" >
-
+  
       <select id="selectEmps"  resultType="tech.xiu.pojo.Emp">
           select *
           from emp order by empno desc
       </select>
-
+  
   </mapper>
   ```
 
@@ -1091,17 +1095,17 @@ public class DiyAspect {
   </build>
   ```
 
-
+  
 
 ### 4-2、Mybatis整合Spring
 
 > 步骤：
 >
-> 1：导包
+>  1：导包 
 >
-> 2：编写配置文件及代码
+>  2：编写配置文件及代码
 >
-> 3：测试
+>  3：测试
 
 #### 4-2-1.方式一：xml方式 SqlSessionFactory
 
@@ -1142,10 +1146,10 @@ public class DiyAspect {
           https://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context
           https://www.springframework.org/schema/context/spring-context.xsd">
-
+  
       <!-- 导入数据库连接信息 -->
       <context:property-placeholder location="classpath*:jdbc.properties"></context:property-placeholder>
-
+  
       <!-- 数据源：DataSource;使用Spring的数据源替换Mybatis的配置 c3p，dbcp druid spring-->
       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
           <property name="driverClassName" value="${jdbc.driver}"></property>
@@ -1153,7 +1157,7 @@ public class DiyAspect {
           <property name="username" value="${jdbc.username}"></property>
           <property name="password" value="${jdbc.password}"></property>
       </bean>
-
+  
       <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
           <property name="dataSource" ref="dataSource" />
           <!-- 绑定MyBatis配置文件 -->
@@ -1161,18 +1165,18 @@ public class DiyAspect {
           <!-- 注册Mapper文件 -->
           <property name="mapperLocations" value="tech/xiu/mapper/*.xml"/>
       </bean>
-
-
+  
+  
       <bean id="empMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
           <property name="mapperInterface" value="tech.xiu.mapper.EmpMapper" />
           <property name="sqlSessionFactory" ref="sqlSessionFactory" />
       </bean>
-
+  
       <bean id="empService" class="tech.xiu.service.impl.EmpServiceImpl">
           <property name="empMapper" ref="empMapper"></property>
       </bean>
   </beans>
-
+  
   ```
 
   ```properties
@@ -1206,9 +1210,9 @@ public class DiyAspect {
           https://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context
           https://www.springframework.org/schema/context/spring-context.xsd">
-
+  
       <context:property-placeholder location="classpath*:jdbc.properties"></context:property-placeholder>
-
+  
       <!-- 数据源：DataSource;使用Spring的数据源替换Mybatis的配置 c3p，dbcp druid spring-->
       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
           <property name="driverClassName" value="${jdbc.driver}"></property>
@@ -1216,7 +1220,7 @@ public class DiyAspect {
           <property name="username" value="${jdbc.username}"></property>
           <property name="password" value="${jdbc.password}"></property>
       </bean>
-
+  
       <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
           <property name="dataSource" ref="dataSource" />
           <!-- 绑定MyBatis配置文件 -->
@@ -1224,16 +1228,16 @@ public class DiyAspect {
           <!-- 注册Mapper文件 -->
           <property name="mapperLocations" value="tech/xiu/dao/*.xml"></property>
       </bean>
-
+  
       <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
           <constructor-arg index="0" ref="sqlSessionFactory" />
       </bean>
-
+  
       <bean id="empService" class="tech.xiu.service.impl.EmpServiceImpl">
           <property name="sqlSession" ref="sqlSession"></property>
       </bean>
   </beans>
-
+  
   ```
 
   ```xml
@@ -1259,7 +1263,7 @@ public class DiyAspect {
 
 **classpath 和 classpath\*的 区别：**
 
-​	**classpath**：**只会到你指定的class路径中查找找文件**;
+​	**classpath**：**只会到你指定的class路径中查找找文件**; 
 ​	**classpath\***：**不仅包含class路径，还包括jar文件中(class路径)进行查找.**
 
 #### 4-2-3.注解方式 使用SqlSession
@@ -1290,7 +1294,7 @@ public class DiyAspect {
 
 > 事务：
 >
-> 就是要么全成功，要么全失败。
+>  就是要么全成功，要么全失败。
 
 **ACID**
 
@@ -1380,4 +1384,14 @@ public class SpringMybatisConfig {
 > 就是需要改变原来的代码，在代码中提交、回滚什么的。
 >
 > 通常不用。
+
+
+
+
+
+
+
+
+
+
 
