@@ -23,6 +23,7 @@
         <module>spring-11-mybatis-spring</module>
         <module>spring-11-mybatis-spring2</module>
         <module>spring-11-mybatis-spring3</module>
+        <module>spring-12-transaction</module>
     </modules>
 
     <properties>
