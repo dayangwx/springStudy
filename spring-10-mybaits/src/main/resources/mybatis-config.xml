@@ -16,7 +16,7 @@
     </environments>
 
     <mappers>
-<!--        <mapper class="tech.xiu.dao.EmpMapper"/>-->
-        <mapper resource="tech/xiu/dao/EmpMapper.xml"></mapper>
+<!--        <mapper class="tech.xiu.mapper.EmpMapper"/>-->
+        <mapper resource="tech/xiu/mapper/EmpMapper.xml"></mapper>
     </mappers>
 </configuration>

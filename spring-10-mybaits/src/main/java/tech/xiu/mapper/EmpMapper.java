@@ -1,4 +1,4 @@
-package tech.xiu.dao;
+package tech.xiu.mapper;
 
 import tech.xiu.pojo.Emp;
 

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.xiu.dao.EmpMapper" >
+<mapper namespace="tech.xiu.mapper.EmpMapper" >
 
     <select id="selectEmps"  resultType="tech.xiu.pojo.Emp">
         select *

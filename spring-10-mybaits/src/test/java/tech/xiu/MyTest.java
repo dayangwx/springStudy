@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-import tech.xiu.dao.EmpMapper;
+import tech.xiu.mapper.EmpMapper;
 import tech.xiu.pojo.Emp;
 
 import java.io.IOException;
