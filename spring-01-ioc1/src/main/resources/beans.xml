@@ -4,10 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dataDaoMysql" class="tech.xiu.dao.DataDaoMysql"/>
-    <bean id="dataDaoOracle" class="tech.xiu.dao.DataDaoOracle"/>
-    <bean id="dataDaoSqlserve" class="tech.xiu.dao.DataDaoSqlserve"/>
-    <bean id="dataServiceImpl" class="tech.xiu.service.impl.DataServiceImpl">
-        <property name="dataDao" ref="dataDaoSqlserve"></property>
-    </bean>
+<!--    <bean id="dataDaoMysql" class="tech.xiu.dao.DataDaoMysql"/>-->
+<!--    <bean id="dataDaoOracle" class="tech.xiu.dao.DataDaoOracle"/>-->
+<!--    <bean id="dataDaoSqlserve" class="tech.xiu.dao.DataDaoSqlserve"/>-->
+<!--    <bean id="dataServiceImpl" class="tech.xiu.service.impl.DataServiceImpl">-->
+<!--        <property name="dataDao" ref="dataDaoSqlserve"></property>-->
+<!--    </bean>-->
+
+
+    <bean id="dataDao" class="tech.xiu.factory.DataDaoFactoryBean" />
 </beans>

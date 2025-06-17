@@ -1,7 +1,8 @@
+.idea
+/spring-01-ioc1/target
 /spring-02-hellospring/target/
 /spring-03-ioc2/target/
 /spring-04-di/target/
-.idea
 /spring-05-autowire/target/
 /spring-06-anno/target/
 /spring-07-annotation/target/
