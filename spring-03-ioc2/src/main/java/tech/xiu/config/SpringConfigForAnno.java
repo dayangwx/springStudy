@@ -1,14 +1,12 @@
 package tech.xiu.config;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-@Component
-public class ApplicationContextBean {
+@Configuration
+@ComponentScan("tech.xiu")
+@PropertySource(value = "classpath:dbname.properties")
+public class SpringConfigForAnno {
 
-//    @Bean
-//    public ApplicationContext applicationContext() {
-//    }
 }
