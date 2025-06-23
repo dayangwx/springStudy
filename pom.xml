@@ -24,6 +24,7 @@
         <module>spring-11-mybatis-spring2</module>
         <module>spring-11-mybatis-spring3</module>
         <module>spring-12-transaction</module>
+        <module>spring-11-mybatis-spring4</module>
     </modules>
 
     <properties>
@@ -51,7 +52,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.8.6</version>
+            <version>1.9.9</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
