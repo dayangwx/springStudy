@@ -18,7 +18,7 @@ import tech.xiu.service.UserServiceImpl;
 public class MyTest {
 
     @Autowired
-    private tech.xiu.anno.UserService userServiceAnno;
+    private UserService userServiceAnno;
 
     @Test
     public void test1() {

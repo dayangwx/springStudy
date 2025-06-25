@@ -2,6 +2,8 @@ package tech.xiu.service;
 
 import org.springframework.stereotype.Service;
 
+
+@Service // 将该类交给Spring容器管理，创建出一个叫userServiceImpl的Bean
 public class UserServiceImpl implements UserService{
     @Override
     public void addUser() {
