@@ -7,4 +7,6 @@ public interface UserService {
     void updateUser();
     void deleteUser();
     String isSucceed();
+
+    Integer getCount(int count);
 }

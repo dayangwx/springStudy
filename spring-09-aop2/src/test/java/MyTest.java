@@ -16,6 +16,8 @@ public class MyTest {
     @Test
     public void test1() {
 //        userService.addUser();
-        userService.isSucceed();
+//        userService.isSucceed();
+        int count = userService.getCount(10);
+        System.out.println(count);
     }
 }

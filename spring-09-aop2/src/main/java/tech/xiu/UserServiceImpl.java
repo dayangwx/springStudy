@@ -29,4 +29,11 @@ public class UserServiceImpl implements UserService {
     public String isSucceed() {
         return "是的，成功了！！！";
     }
+
+    @Override
+    public Integer getCount(int count) {
+        count = count * 100;
+        System.out.println("获取count的值：" + count );
+        return count;
+    }
 }
