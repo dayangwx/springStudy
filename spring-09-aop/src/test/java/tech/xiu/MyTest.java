@@ -8,12 +8,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import tech.xiu.anno.AspectLog;
+import tech.xiu.anno.AspectLogConfig;
 import tech.xiu.service.UserService;
 import tech.xiu.service.UserServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)//junit整合spring
-@ContextConfiguration(classes={AspectLog.class})//标出配置类，如果是配置文件，使用locations参数
+@ContextConfiguration(classes={AspectLogConfig.class})//标出配置类，如果是配置文件，使用locations参数
 //@ContextConfiguration(locations = {"classpath*:/*.xml"})//标出配置类，如果是配置文件，使用locations参数
 public class MyTest {
 

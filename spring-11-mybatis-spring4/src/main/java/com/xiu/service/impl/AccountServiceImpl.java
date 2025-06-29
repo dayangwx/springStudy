@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -40,5 +41,15 @@ public class AccountServiceImpl implements AccountService {
 
     public List<Account> findAll() {
         return accountDao.findAll();
+    }
+
+    public Integer spendTimeTotal(int num) {
+        List<Account> results = new ArrayList<>();
+        for (int i = 0; i < num; i++) {
+            Account account = accountDao.findById(i + 1);
+            results.add(account);
+        }
+        System.out.println("查询结果数量: " + results.size());
+        return results.size();
     }
 }

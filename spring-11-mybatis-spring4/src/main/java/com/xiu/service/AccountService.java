@@ -17,4 +17,6 @@ public interface AccountService {
 
     Account findById(Integer id);
 
+    Integer spendTimeTotal(int i);
+
 }
